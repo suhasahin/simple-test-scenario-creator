@@ -4,7 +4,7 @@
 
 ## 📖 Açıklama
 
-Bu projede, şu şu şu özellikler sunulmaktadır. Amaç şudur ve şu problemlere çözüm getirmektedir.
+Bu projede, test senaryosunda yapacağınız işleri bir sayfa üzerinden basitçe yapıp, word olarak çıktı almanıza yarayan bir proje.
 
 ## 🚀 Kurulum
 
