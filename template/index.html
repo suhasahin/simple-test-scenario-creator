@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Raporlama</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 600px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"], textarea {
+            padding: 10px;
+            margin-bottom: 25px; /* artırılan boşluk */
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            margin-top: 20px; /* yeni başlık için üstte ekstra boşluk */
+        }
+
+        .small-input {
+            font-size: 10px; /* Küçük font boyutu */
+        }
+
+        textarea {
+            resize: both;
+            height: 100px;
+            box-sizing: border-box; /* Bu, padding ve border'ın genel genişliği etkilememesi için eklenir. */
+            width: 100%; /* Tam genişlik */
+        }
+
+        input[type="submit"], .add-input-btn {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .add-input-btn {
+            margin-top: 10px;
+            width: auto;
+        }
+
+        input[type="submit"]:hover, .add-input-btn:hover {
+            background-color: #555;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+    </style>
+
+    <script>
+        function addInput(id) {
+            const inputElem = document.createElement("input");
+            inputElem.type = "text";
+            inputElem.className = "small-input";
+            document.getElementById(id).appendChild(inputElem);
+        }
+    </script>
+
+</head>
+
+<body>
+    <form action="/" method="post">
+        <label for="scenario">Test Senaryosu:</label>
+        <input type="text" id="scenario" name="scenario">
+
+        <label for="scenario_name">1. Test Senaryosu Adı:</label>
+        <input type="text" id="scenario_name" name="scenario_name">
+
+        <p>Ön Koşullar:</p>
+        <ul>
+            <li>Kullanıcının aktif bir internet bağlantısı olmalı.</li>
+            <li>Kullanıcının geçerli bir e-posta adresi olmalı.</li>
+        </ul>
+
+        <label for="steps">Adımlar:</label>
+        <textarea id="steps" name="steps"></textarea>
+        <div id="extraSteps"></div>
+        <button type="button" class="add-input-btn" onclick="addInput('extraSteps')">+ Not Ekle</button>
+
+        <label for="expected_result">Beklenen Sonuç:</label>
+        <textarea id="expected_result" name="expected_result"></textarea>
+        <div id="extraExpectedResult"></div>
+        <button type="button" class="add-input-btn" onclick="addInput('extraExpectedResult')">+ Not Ekle</button>
+
+        <label for="actual_result">Gerçek Sonuç:</label>
+        <textarea id="actual_result" name="actual_result"></textarea>
+        <div id="extraActualResult"></div>
+        <button type="button" class="add-input-btn" onclick="addInput('extraActualResult')">+ Not Ekle</button>
+
+        <label for="status">Durum:</label>
+        <input type="text" id="status" name="status">
+
+        <input type="submit" value="Raporla">
+    </form>
+</body>
+
+</html>
