@@ -6,6 +6,8 @@
 
 Bu projede, test senaryosunda yapacağınız işleri bir sayfa üzerinden basitçe yapıp, word olarak çıktı almanıza yarayan bir proje.
 
+Gerekli eklemeler yapılacaktır.
+
 ## 🚀 Kurulum
 
 1. Şu bağlantıdan projeyi indirin veya `git clone https://github.com/suhasahin/simple-test-scenario-creator.git` komutuyla klonlayın.
