@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        # Word dosyası oluşturma işlemleri
+        
         doc = Document()
         doc.add_heading('Test Raporu', 0)
 
@@ -39,7 +39,7 @@ def index():
         doc.save(filename)
         return send_from_directory(os.getcwd(), filename, as_attachment=True)
 
-    return render_template('index.html')  # Bu kısım, yukarıda verdiğiniz HTML dosyasını 'index.html' adıyla templates klasöründe saklamalısınız.
+    return render_template('index.html')  
 
 if __name__ == "__main__":
     app.run(debug=True)
