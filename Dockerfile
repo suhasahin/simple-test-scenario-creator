@@ -1,4 +1,8 @@
+FROM jenkins/agent:alpine-jdk11
 USER root
-FROM python:3.11
-RUN apt install python3.11-venv
-RUN pip install Flask pandas python-docx
+RUN apk add python3
+RUN apk add py3-pip
+//RUN apt install python3.11-venv
+//RUN pip install Flask pandas python-docx
+USER jenkins
+
